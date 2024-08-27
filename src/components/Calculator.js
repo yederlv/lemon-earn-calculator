@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { TextField, MenuItem, Button, Box, Typography, Divider } from '@mui/material';
 import DevProfile from './DevProfile'; // Importa el componente DevProfile
 import { calculatorStyles } from '../styles/CalculatorStyles';
-import BitcoinImage from '../assets/images/bitcoin.png';
-import EthereumImage from '../assets/images/ethereum.png';
-import TetherImage from '../assets/images/tether.png';
+import BTCImage from '../assets/images/bitcoin.png';
+import ETHImage from '../assets/images/ethereum.png';
+import USDCImage from '../assets/images/usdc.png';
+import DAIImage from '../assets/images/dai.png';
+import MATICImage from '../assets/images/polygon.png';
+import USDTImage from '../assets/images/tether.png';
 
 const Calculator = () => {
     const [interestRate, setInterestRate] = useState('');
@@ -13,9 +16,12 @@ const Calculator = () => {
     const [result, setResult] = useState(null);
 
     const currencies = [
-        { value: 'BTC', label: 'Bitcoin (BTC)', image: BitcoinImage },
-        { value: 'ETH', label: 'Ethereum (ETH)', image: EthereumImage },
-        { value: 'USDT', label: 'Tether (USDT)', image: TetherImage }
+        { value: 'BTC', label: 'Bitcoin (BTC)', image: BTCImage },
+        { value: 'ETH', label: 'Ethereum (ETH)', image: ETHImage },
+        { value: 'USDT', label: 'Tether (USDT)', image: USDTImage },
+        { value: 'USDC', label: 'USD COIN (USDC)', image: USDCImage },
+        { value: 'DAI', label: 'Dai (DAI)', image: DAIImage },
+        { value: 'MATIC', label: 'Poligon (MATIC)', image: MATICImage }
     ];
 
     const calculateInterest = () => {
