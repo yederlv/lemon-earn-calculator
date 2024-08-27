@@ -3,16 +3,16 @@ import { Box, Typography, Link } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-//import Avatar from '@mui/material/Avatar';
+import Avatar from '@mui/material/Avatar';
 import { devProfileStyles } from '../styles/DevProfileStyles';
-//import YederDev from '../assets/images/YederDev.jpg';
-import DevProfileLemon from '../assets/images/DevProfileLemon.mp4';
+import DevProfileLemon from '../assets/images/raccoondev.png';
+//import DevProfileLemon from '../assets/images/DevProfileLemon.mp4';
 
 const DevProfile = () => {
     return (
         <Box sx={devProfileStyles.container}>
             {/* Usar NFT Lemon */}
-            <Box sx={devProfileStyles.videoContainer}>
+            {/*<Box sx={devProfileStyles.videoContainer}>
                 <video
                     src={DevProfileLemon}
                     autoPlay
@@ -20,18 +20,26 @@ const DevProfile = () => {
                     muted
                     style={devProfileStyles.avatar}
                 />
-            </Box>
-            {/*<Avatar
+            </Box>*/}
+            <Avatar
                 alt="Raccon Dev"
                 src={DevProfileLemon} // Ruta de la imagen del avatar
                 sx={devProfileStyles.avatar}
-            />*/}	
+            />
             <Box>
                 <Typography variant="h6" sx={devProfileStyles.name}>
                     Yeder 
                 </Typography>
                 <Typography variant="body2" sx={devProfileStyles.username}>
-                    🍋 $Raccoondev 
+                    🍋
+                    <Link 
+                        href="https://lat.lemon.me/$raccoondev" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        sx={{ color: '#00F068', textDecoration: 'none' }}
+                    >
+                        $Raccoondev
+                    </Link>
                 </Typography>
                 <Box sx={devProfileStyles.socialIcons}>
                     <Link href="https://github.com/yederlv" target="_blank" rel="noopener noreferrer">
