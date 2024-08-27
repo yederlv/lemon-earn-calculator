@@ -16,9 +16,10 @@ import { Typography, Box } from '@mui/material';
 const Results = ({ result, currency }) => (
     <Box sx={{ marginTop: 4 }}>
         <Typography variant="h6">Ganancias Estimadas:</Typography>
-        <Typography>Semanal: {result.weekly.toFixed(2)} {currency}</Typography>
-        <Typography>Mensual: {result.monthly.toFixed(2)} {currency}</Typography>
-        <Typography>Anual: {result.yearly.toFixed(2)} {currency}</Typography>
+        <Typography>Diaria: {result.daily.toFixed(8)} {currency}</Typography>
+        <Typography>Semanal: {result.weekly.toFixed(8)} {currency}</Typography>
+        <Typography>Mensual: {result.monthly.toFixed(8)} {currency}</Typography>
+        <Typography>Anual: {result.yearly.toFixed(8)} {currency}</Typography>
     </Box>
 );
 

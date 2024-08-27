@@ -16,7 +16,7 @@ const Calculator = () => {
     const [interestRate, setInterestRate] = useState('');
     const [amount, setAmount] = useState('');
     const [currency, setCurrency] = useState('BTC');
-    const [result, setResult] = useState({ weekly: 0, monthly: 0, yearly: 0 });
+    const [result, setResult] = useState({ daily: 0, weekly: 0, monthly: 0, yearly: 0 });
 
     const currencies = [
         { value: 'BTC', label: 'Bitcoin (BTC)' },
@@ -30,11 +30,19 @@ const Calculator = () => {
      * Esta función calcula las ganancias estimadas basadas en la tasa de interés y la cantidad
      * de criptomonedas ingresadas. Calcula el interés semanal, mensual y anual.
      */
-    const calculateInterest = () => {
+    /*const calculateInterest = () => {
         const weeklyInterest = (amount * (interestRate / 100)) / 52;
         const monthlyInterest = weeklyInterest * 4;
         const yearlyInterest = weeklyInterest * 52;
         setResult({ weekly: weeklyInterest, monthly: monthlyInterest, yearly: yearlyInterest });
+    };*/
+
+    const calculateInterest = () => {
+        const dailyInterest = (amount * (interestRate / 100)) / 365;
+        const weeklyInterest = dailyInterest * 7;
+        const monthlyInterest = weeklyInterest * 4;
+        const yearlyInterest = weeklyInterest * 52;
+        setResult({ daily: dailyInterest, weekly: weeklyInterest, monthly: monthlyInterest, yearly: yearlyInterest });
     };
 
     return (
