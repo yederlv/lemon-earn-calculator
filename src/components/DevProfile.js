@@ -28,10 +28,10 @@ const DevProfile = () => {
             />*/}	
             <Box>
                 <Typography variant="h6" sx={devProfileStyles.name}>
-                    Yeder
+                    Yeder 
                 </Typography>
                 <Typography variant="body2" sx={devProfileStyles.username}>
-                    $Raccoondev
+                    🍋 $Raccoondev 
                 </Typography>
                 <Box sx={devProfileStyles.socialIcons}>
                     <Link href="https://github.com/yederlv" target="_blank" rel="noopener noreferrer">
