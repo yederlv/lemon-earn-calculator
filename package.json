@@ -2,7 +2,7 @@
   "name": "lemon-earn-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yederlv.github.io/lemon-earn-calculator/build",
+  "homepage": "https://yederlv.github.io/lemon-earn-calculator/pages",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
