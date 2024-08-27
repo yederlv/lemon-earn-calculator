@@ -1,9 +1,17 @@
 export const calculatorStyles = {
     container: {
         display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
+    },
+    content: {
+        display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'flex-start', // Para alinear ambos cuadros en la parte superior
-        flexWrap: 'wrap', // Para que se adapten en pantallas más pequeñas
+        width: '100%',
+        maxWidth: '800px',
+        gap: '1rem',
+        flexWrap: 'wrap', // Para apilar los cuadros en pantallas pequeñas
     },
     box: {
         backgroundColor: '#1f1f1f', // DARK GRAY
@@ -12,9 +20,9 @@ export const calculatorStyles = {
         borderRadius: '8px',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
         fontFamily: 'Poppins, sans-serif',
-        width: '100%', // Ocupar todo el ancho del contenedor padre
-        maxWidth: '48%', // Asegurar que ambos cuadros tengan el mismo tamaño
-        boxSizing: 'border-box', // Para incluir padding y borde en el tamaño
+        flex: '1 1 48%',
+        boxSizing: 'border-box',
+        minWidth: '280px', // Asegura que los cuadros tengan un tamaño mínimo en pantallas pequeñas
     },
     header: {
         marginBottom: '1rem',
@@ -31,26 +39,26 @@ export const calculatorStyles = {
     textField: {
         backgroundColor: '#2c2c2c', // DARKER GRAY
         '& .MuiInputBase-input': {
-            color: '#FFFFFF', // WHITE
+            color: '#FFFFFF',
             fontFamily: 'Poppins, sans-serif',
         },
         '& .MuiInputLabel-root': {
-            color: '#B0B0B0', // LIGHTER GRAY
+            color: '#B0B0B0',
             fontFamily: 'Poppins, sans-serif',
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: '#444', // GRAY
+                borderColor: '#444',
             },
             '&:hover fieldset': {
                 borderColor: '#00F068', // GREEN (Greent)
             },
             '&.Mui-focused fieldset': {
-                borderColor: '#00F068', // GREEN (Greent)
+                borderColor: '#00F068',
             },
             fontFamily: 'Poppins, sans-serif',
         },
-        marginBottom: '1rem', // Espaciado uniforme
+        marginBottom: '1rem',
     },
     iconBox: {
         marginLeft: '0.5rem',
@@ -59,35 +67,35 @@ export const calculatorStyles = {
     },
     button: {
         backgroundColor: '#00F068', // GREEN (Greent)
-        color: '#000000', // BLACK
+        color: '#000000',
         '&:hover': {
             backgroundColor: '#00E060', // Slightly darker Green
-            color: '#000000', // BLACK
+            color: '#000000',
         },
         fontFamily: 'Poppins, sans-serif',
         fontWeight: '500',
-        marginTop: '1rem', // Para espaciarlo de los campos
+        marginTop: '1rem',
     },
     resultBox: {
-        backgroundColor: '#2c2c2c', // DARKER GRAY
-        color: '#FFFFFF', // WHITE
+        backgroundColor: '#2c2c2c',
+        color: '#FFFFFF',
         padding: '1.5rem',
         borderRadius: '8px',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
         fontFamily: 'Poppins, sans-serif',
-        width: '100%', // Asegurar que ambos cuadros tengan el mismo tamaño
-        maxWidth: '48%', // Asegurar que ambos cuadros tengan el mismo tamaño
-        boxSizing: 'border-box', // Para incluir padding y borde en el tamaño
+        flex: '1 1 48%',
+        boxSizing: 'border-box',
+        minWidth: '280px',
     },
     resultHeader: {
-        color: '#00F068', // GREEN (Greent)
+        color: '#00F068',
         marginBottom: '1rem',
         fontFamily: 'Poppins, sans-serif',
         fontWeight: '600',
         fontSize: '1.25rem',
     },
     resultText: {
-        color: '#FFFFFF', // WHITE
+        color: '#FFFFFF',
         marginBottom: '0.5rem',
         fontFamily: 'Poppins, sans-serif',
         fontWeight: '400',
@@ -95,9 +103,9 @@ export const calculatorStyles = {
     note: {
         marginTop: '1rem',
         fontSize: '0.85rem',
-        color: '#B0B0B0', // LIGHTER GRAY
-        textAlign: 'center', // Centra el texto para una mejor apariencia
+        color: '#B0B0B0',
+        textAlign: 'center',
         fontFamily: 'Poppins, sans-serif',
-        width: '100%', // Asegura que el texto ocupa todo el ancho disponible
+        width: '100%',
     },
 };

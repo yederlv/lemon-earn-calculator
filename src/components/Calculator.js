@@ -35,76 +35,77 @@ const Calculator = () => {
 
     return (
         <Box sx={calculatorStyles.container}>
-            <Box sx={calculatorStyles.box}>
-                <Box sx={calculatorStyles.currencyBox}>
+            <Box sx={calculatorStyles.content}>
+                <Box sx={calculatorStyles.box}>
+                    <Box sx={calculatorStyles.currencyBox}>
+                        <TextField
+                            select
+                            label="Moneda"
+                            value={currency}
+                            onChange={(e) => setCurrency(e.target.value)}
+                            fullWidth
+                            margin="normal"
+                            sx={calculatorStyles.textField}
+                            onKeyPress={handleKeyPress}
+                        >
+                            {currencies.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                        <Box sx={calculatorStyles.iconBox}>
+                            <img src={selectedCurrency.image} alt={selectedCurrency.label} style={{ width: '30px', height: '30px' }} />
+                        </Box>
+                    </Box>
                     <TextField
-                        select
-                        label="Moneda"
-                        value={currency}
-                        onChange={(e) => setCurrency(e.target.value)}
+                        label="Tasa de Interés (%)"
+                        value={interestRate}
+                        onChange={(e) => setInterestRate(e.target.value)}
                         fullWidth
                         margin="normal"
+                        type="number"
                         sx={calculatorStyles.textField}
                         onKeyPress={handleKeyPress}
+                    />
+                    <TextField
+                        label="Cantidad a Invertir"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        fullWidth
+                        margin="normal"
+                        type="number"
+                        sx={calculatorStyles.textField}
+                        onKeyPress={handleKeyPress}
+                    />
+                    <Divider sx={{ marginY: '1rem', backgroundColor: '#444' }} />
+                    <Button
+                        variant="contained"
+                        onClick={calculateInterest}
+                        fullWidth
+                        sx={calculatorStyles.button}
                     >
-                        {currencies.map((option) => (
-                            <MenuItem key={option.value} value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
-                    </TextField>
-                    <Box sx={calculatorStyles.iconBox}>
-                        <img src={selectedCurrency.image} alt={selectedCurrency.label} style={{ width: '30px', height: '30px' }} />
-                    </Box>
+                        Calcular
+                    </Button>
                 </Box>
-                <TextField
-                    label="Tasa de Interés (%)"
-                    value={interestRate}
-                    onChange={(e) => setInterestRate(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                    type="number"
-                    sx={calculatorStyles.textField}
-                    onKeyPress={handleKeyPress}
-                />
-                <TextField
-                    label="Cantidad a Invertir"
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                    type="number"
-                    sx={calculatorStyles.textField}
-                    onKeyPress={handleKeyPress}
-                />
-                <Divider sx={{ marginY: '1rem', backgroundColor: '#444' }} />
-                <Button
-                    variant="contained"
-                    onClick={calculateInterest}
-                    fullWidth
-                    sx={calculatorStyles.button}
-                >
-                    Calcular
-                </Button>
+
+                <Box sx={calculatorStyles.resultBox}>
+                    <Typography variant="h6" sx={calculatorStyles.resultHeader}>Resultado</Typography>
+                    {result ? (
+                        <>
+                            <Typography sx={calculatorStyles.resultText}>Tasa de interés: {interestRate}%</Typography>
+                            <Typography sx={calculatorStyles.resultText}>Cantidad a Invertir: {amount} {currency}</Typography>
+                            <Typography sx={calculatorStyles.resultText}>Ganancia Diaria: {result.daily.toFixed(8)} {currency}</Typography>
+                            <Typography sx={calculatorStyles.resultText}>Ganancia Semanal: {result.weekly.toFixed(8)} {currency}</Typography>
+                            <Typography sx={calculatorStyles.resultText}>Ganancia Mensual: {result.monthly.toFixed(8)} {currency}</Typography>
+                            <Typography sx={calculatorStyles.resultText}>Ganancia Anual: {result.yearly.toFixed(8)} {currency}</Typography>
+                        </>
+                    ) : (
+                        <Typography sx={calculatorStyles.resultText}>Introduce los datos para calcular.</Typography>
+                    )}
+                </Box>
             </Box>
 
-            <Box sx={calculatorStyles.resultBox}>
-                <Typography variant="h6" sx={calculatorStyles.resultHeader}>Resultado</Typography>
-                {result ? (
-                    <>
-                        <Typography sx={calculatorStyles.resultText}>Tasa de interés: {interestRate}%</Typography>
-                        <Typography sx={calculatorStyles.resultText}>Cantidad a Invertir: {amount} {currency}</Typography>
-                        <Typography sx={calculatorStyles.resultText}>Ganancia Diaria: {result.daily.toFixed(8)} {currency}</Typography>
-                        <Typography sx={calculatorStyles.resultText}>Ganancia Semanal: {result.weekly.toFixed(8)} {currency}</Typography>
-                        <Typography sx={calculatorStyles.resultText}>Ganancia Mensual: {result.monthly.toFixed(8)} {currency}</Typography>
-                        <Typography sx={calculatorStyles.resultText}>Ganancia Anual: {result.yearly.toFixed(8)} {currency}</Typography>
-                    </>
-                ) : (
-                    <Typography sx={calculatorStyles.resultText}>Introduce los datos para calcular.</Typography>
-                )}
-            </Box>
-
-            {/* Note Section */}
             <Typography sx={calculatorStyles.note}>
                 * El resultado del cálculo es estimado y puede variar dependiendo de las condiciones del mercado.
             </Typography>
@@ -112,4 +113,4 @@ const Calculator = () => {
     );
 };
 
-export default Calculator
+export default Calculator;
