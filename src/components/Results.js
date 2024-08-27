@@ -5,7 +5,7 @@ import { Typography, Box } from '@mui/material';
  * Componente Results
  * 
  * Este componente muestra los resultados de las ganancias estimadas calculadas por el componente Calculator.
- * Las ganancias se presentan en periodos semanal, mensual y anual.
+ * Las ganancias se presentan en periodos diario, semanal, mensual y anual.
  * 
  * @param {Object} props - Las propiedades pasadas al componente.
  * @param {Object} props.result - Objeto que contiene las ganancias calculadas.

@@ -1,25 +1,15 @@
 import React from 'react';
-import Header from './components/Header';
+import { Container, Paper } from '@mui/material';
 import Calculator from './components/Calculator';
-import { Container } from '@mui/material';
-import { GlobalStyles } from './styles/GlobalStyles';
+import { appStyles } from './styles/AppStyles';
 
-/**
- * Componente principal de la aplicación
- * 
- * Combina los componentes Header, Calculator y aplica los estilos globales.
- * 
- * @returns {JSX.Element} La estructura principal de la aplicación.
- */
 function App() {
     return (
-        <>
-            <GlobalStyles />
-            <Header />
-            <Container maxWidth="sm" sx={{ padding: 4 }}>
+        <Container maxWidth="md" sx={appStyles.container}>
+            <Paper elevation={3} sx={appStyles.paper}>
                 <Calculator />
-            </Container>
-        </>
+            </Paper>
+        </Container>
     );
 }
 
