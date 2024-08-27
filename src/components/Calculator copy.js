@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { TextField, MenuItem, Button, Box, Typography, Divider } from '@mui/material';
-import DevProfile from './DevProfile'; // Importa el componente DevProfile
 import { calculatorStyles } from '../styles/CalculatorStyles';
 import BitcoinImage from '../assets/images/bitcoin.png';
 import EthereumImage from '../assets/images/ethereum.png';
@@ -36,7 +35,6 @@ const Calculator = () => {
 
     return (
         <Box sx={calculatorStyles.container}>
-            <DevProfile /> {/* Agrega el componente DevProfile */}
             <Box sx={calculatorStyles.content}>
                 <Box sx={calculatorStyles.box}>
                     <Box sx={calculatorStyles.currencyBox}>
