@@ -1,73 +1,29 @@
-# lemon-earn-calculator
-Lemon Earn Calculator es una aplicación web desarrollada con React  que permite a los usuarios calcular las ganancias estimadas al invertir en Lemon Earn. La aplicación permite a los usuarios ingresar la tasa de interés, la cantidad de criptomonedas a invertir, y seleccionar el tipo de moneda. 
+# Lemon Earn Calculator
 
-# Getting Started with Create React App
+## Descripción del Proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lemon Earn Calculator es una aplicación web que permite a los usuarios calcular las ganancias estimadas que pueden obtener al invertir en criptomonedas a través de la funcionalidad "Earn" de Lemon. La calculadora permite seleccionar la criptomoneda, ingresar la tasa de interés anual, y la cantidad a invertir para obtener estimaciones de ganancias diarias, semanales, mensuales y anuales.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Selección de Moneda**: El usuario puede seleccionar entre varias criptomonedas como Bitcoin (BTC), Ethereum (ETH), y Tether (USDT).
+- **Tasa de Interés Personalizable**: Ingresar la tasa de interés anual para calcular las ganancias.
+- **Resultados Detallados**: El cálculo de ganancias se muestra de manera diaria, semanal, mensual y anual.
+- **Responsividad**: La aplicación está diseñada para ser completamente responsiva y se adapta a cualquier tamaño de pantalla, incluidos smartphones.
+- **Perfil del Desarrollador**: Incluye un perfil de desarrollador con enlaces a redes sociales y un avatar que se muestra a través de un video .mp4.
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Biblioteca principal para la creación de la interfaz de usuario.
+- **Material-UI**: Para los componentes de UI y estilización.
+- **JavaScript (ES6+)**: Lenguaje principal de desarrollo.
+- **CSS Flexbox**: Para la disposición y alineación responsiva de los componentes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/tu_usuario/lemon-earn-calculator.git
+   cd lemon-earn-calculator
+   npm install
+   npm start
