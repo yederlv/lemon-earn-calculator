@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/lemon-earn-calculator/static/js/main.17714cc8.js",
-    "static/media/DevProfileLemon.mp4": "/lemon-earn-calculator/static/media/DevProfileLemon.2a8b33f81131daf22b1d.mp4",
-    "static/media/ethereum.png": "/lemon-earn-calculator/static/media/ethereum.a85b6de0dc4a013ae2f8.png",
-    "static/media/usdc.png": "/lemon-earn-calculator/static/media/usdc.c4477cfcf6565cacc68b.png",
-    "static/media/bitcoin.png": "/lemon-earn-calculator/static/media/bitcoin.82491fef997ab841639c.png",
-    "static/media/dai.png": "/lemon-earn-calculator/static/media/dai.196bd5b1178303158adc.png",
-    "static/media/polygon.png": "/lemon-earn-calculator/static/media/polygon.9279b195b4676fc88db4.png",
-    "static/media/tether.png": "/lemon-earn-calculator/static/media/tether.ae1267bcdb4121dbf8e0.png",
-    "index.html": "/lemon-earn-calculator/index.html",
-    "main.17714cc8.js.map": "/lemon-earn-calculator/static/js/main.17714cc8.js.map"
+    "main.js": "/lemon-earn-calculator/build/static/js/main.82a03898.js",
+    "static/media/DevProfileLemon.mp4": "/lemon-earn-calculator/build/static/media/DevProfileLemon.2a8b33f81131daf22b1d.mp4",
+    "static/media/ethereum.png": "/lemon-earn-calculator/build/static/media/ethereum.a85b6de0dc4a013ae2f8.png",
+    "static/media/usdc.png": "/lemon-earn-calculator/build/static/media/usdc.c4477cfcf6565cacc68b.png",
+    "static/media/bitcoin.png": "/lemon-earn-calculator/build/static/media/bitcoin.82491fef997ab841639c.png",
+    "static/media/dai.png": "/lemon-earn-calculator/build/static/media/dai.196bd5b1178303158adc.png",
+    "static/media/polygon.png": "/lemon-earn-calculator/build/static/media/polygon.9279b195b4676fc88db4.png",
+    "static/media/tether.png": "/lemon-earn-calculator/build/static/media/tether.ae1267bcdb4121dbf8e0.png",
+    "index.html": "/lemon-earn-calculator/build/index.html",
+    "main.82a03898.js.map": "/lemon-earn-calculator/build/static/js/main.82a03898.js.map"
   },
   "entrypoints": [
-    "static/js/main.17714cc8.js"
+    "static/js/main.82a03898.js"
   ]
 }
