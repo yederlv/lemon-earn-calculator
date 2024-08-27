@@ -103,7 +103,7 @@ const Calculator = () => {
                         <>
                             <Typography sx={calculatorStyles.resultText}>Tasa de interés: {interestRate}%</Typography>
                             <Typography sx={calculatorStyles.resultText}>Cantidad a Invertir: {amount} {currency}</Typography>
-                            <Typography sx={calculatorStyles.resultText}>Ganancia Diaria: {result.daily.toFixed(8)} {currency}</Typography>
+                            {/*<Typography sx={calculatorStyles.resultText}>Ganancia Diaria: {result.daily.toFixed(8)} {currency}</Typography>*/}
                             <Typography sx={calculatorStyles.resultText}>Ganancia Semanal: {result.weekly.toFixed(8)} {currency}</Typography>
                             <Typography sx={calculatorStyles.resultText}>Ganancia Mensual: {result.monthly.toFixed(8)} {currency}</Typography>
                             <Typography sx={calculatorStyles.resultText}>Ganancia Anual: {result.yearly.toFixed(8)} {currency}</Typography>
